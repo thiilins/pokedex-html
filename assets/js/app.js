@@ -23,6 +23,13 @@ const fetchPokemon = () => {
          </a> 
           `;
       });
+      const iconType2 = types.map((type) => {
+        return `
+          <a href="#">
+          <img class="card-type-icon-2 ${type}-icon-2" title="${type}" alt="${type} icon" src="../assets/img/types-png/${type}.png">
+         </a> 
+          `;
+      });
       const idLength = (id) => {
         const idString = id.toString();
         if (idString.length <= 1) {
@@ -36,7 +43,7 @@ const fetchPokemon = () => {
 
       // console.log(iconType);
       acc += `
-          <div class="pokedex-card ${types[0]}-bg-color">
+          <div id="${pokemon.id}" class="pokedex-card ${types[0]}-bg-color">
       <!--START CARDBOX  -->
       <div class="card">
         <div class="card-id">
@@ -47,11 +54,22 @@ const fetchPokemon = () => {
           <div class="card-image-object" style="background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
             pokemon.id
           }.svg');"></div>
+          <div class="card-image-object-2 ${
+            types[0]
+          }-bg-color" style="background-image: url('https://cdn.traction.one/pokedex/pokemon/${
+        pokemon.id
+      }.png')"></div>
         </div>
-        <!--START IMAGE  -->
+        <!--START TYPES  -->
         <div class="card-types">
           <div class="card-types-box">
             ${iconType.join(" ")}
+          </div>
+        </div>
+      </div>
+        <div class="card-types-2">
+          <div class="card-types-box-2">
+            ${iconType2.join(" ")}
           </div>
         </div>
       </div>
