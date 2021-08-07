@@ -1,0 +1,101 @@
+/* Grass */
+
+.grass-bg-color {
+  background-color: var(--grass);
+}
+
+/* Fire */
+
+.fire-bg-color {
+  background-color: var(--fire);
+}
+
+/* flying */
+
+.flying-bg-color {
+  background-color: var(--flying);
+}
+
+/* rock */
+
+.rock-bg-color {
+  background-color: var(--rock);
+}
+
+/* dark */
+
+.dark-bg-color {
+  background-color: var(--dark);
+}
+
+/* water */
+
+.water-bg-color {
+  background-color: var(--water);
+}
+
+/* bug */
+
+.bug-bg-color {
+  background-color: var(--bug);
+}
+
+/* poison */
+
+.poison-bg-color {
+  background-color: var(--poison);
+}
+
+/* normal */
+
+.normal-bg-color {
+  background-color: var(--normal);
+}
+
+/* electric */
+
+.electric-bg-color {
+  background-color: var(--electric);
+}
+
+/* fairy */
+
+.fairy-bg-color {
+  background-color: var(--fairy);
+}
+
+/* ground */
+
+.ground-bg-color {
+  background-color: var(--ground);
+}
+
+/* fighting */
+
+.fighting-bg-color {
+  background-color: var(--fighting);
+}
+
+/* psychic */
+
+.psychic-bg-color {
+  background-color: var(--psychic);
+}
+
+/* ghost */
+
+.ghost-bg-color {
+  background-color: var(--ghost);
+}
+
+/* ice */
+
+.ice-bg-color {
+  background-color: var(--ice);
+}
+
+/* psychic */
+
+.dragon-bg-color {
+  background-color: var(--dragon);
+}

@@ -1,0 +1,66 @@
+@import url(/assets/css/variables.css);
+@import url(/assets/css/base.css);
+@import url(/assets/css/types.css);
+.card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 40rem;
+  max-height: 40rem;
+  flex-direction: column;
+}
+
+.card-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 80%;
+  min-height: 5rem;
+  max-height: 5.1rem;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 2rem;
+  background-color: var(--light-color);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -2rem;
+}
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+}
+.card-image-object {
+  display: flex;
+  width: 32rem;
+  height: 40rem;
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+  background-position: 0 5rem;
+}
+
+.card-types {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  top: -2rem;
+}
+.card-types-box {
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  box-sizing: content-box;
+  border-radius: 6rem;
+}
+.card-type-icon {
+  width: 4rem;
+  border-radius: 100%;
+  padding: 0.8rem;
+  border: 3px solid white;
+  box-sizing: content-box;
+}

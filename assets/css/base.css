@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: #0a0a0a;
+  font-family: "Comfortaa", cursive;
+}
+header,
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  background-color: #fff;
+}
+header {
+  margin-bottom: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.logo-img {
+  width: 8rem;
+}
+.pokedex {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  grid-gap: 6rem;
+  padding-inline-start: 0;
+  padding: 5rem;
+}
+.pokedex-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  min-height: 25rem;
+  width: 100%;
+  height: 100%;
+}
