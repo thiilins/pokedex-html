@@ -1,9 +1,3 @@
-// const iconType = (array) => {
-//   array.map((item) => {
-//     const icon = `<img src="/assets/img/types-icon/${item}.svg>`;
-//   });
-// };
-
 const fetchPokemon = () => {
   const getPokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
   const pokemonPromises = [];

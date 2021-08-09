@@ -1,7 +1,7 @@
 /* ANIMAÇÕES */
 @keyframes bounce {
   20% {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
 
   40% {
@@ -9,7 +9,7 @@
   }
 
   80% {
-    transform: translateY(-12px);
+    transform: translateY(-2px);
   }
 
   100% {
