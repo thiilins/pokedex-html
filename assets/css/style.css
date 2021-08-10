@@ -20,6 +20,8 @@
   --water: #579edd;
   --dark-color: #000;
   --light-color: #fff;
+  --cardMinHeight: 40rem;
+  --cardMinWidth: 32rem;
 }
 * {
   margin: 0;
@@ -55,7 +57,7 @@ header {
   max-width: 1440px;
   width: 100%;
 }
-.logo-img {
+.logo-assets/img {
   width: 8rem;
 }
 .header-content {
@@ -67,7 +69,8 @@ header {
 .pokedex {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--cardMinWidth), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--cardMinHeight), 1fr));
   grid-gap: 6rem;
   padding-inline-start: 0;
   padding: 5rem;
@@ -93,10 +96,10 @@ button#search-id-btn {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1rem;
   position: relative;
   border-radius: 1rem;
-  min-height: 25rem;
+  min-height: var(--cardMinHeight);
+  min-width: var(--cardMinWidth);
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -137,16 +140,17 @@ button#search-id-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40rem;
+  width: 100%;
+  height: 100%;
 }
 
 .card-image {
   display: flex;
-  width: 32rem;
-  height: 40rem;
-  background-size: 100% 80%;
+  min-width: var(--cardMinWidth);
+  min-height: var(--cardMinHeight);
+  background-size: 100% 90%;
   background-repeat: no-repeat;
-  background-position: 0 5rem;
+  background-position: center;
 }
 
 .card-types-box {
@@ -183,7 +187,7 @@ button#search-id-btn {
   background-color: var(--grass);
 }
 .grass-card-bg:hover {
-  background-image: url("../img/bg/grass.svg");
+  background-image: url("/assets/img/bg/grass.svg");
   background-size: unset;
 }
 .grass-icon-bg {
@@ -196,7 +200,7 @@ button#search-id-btn {
   background-color: var(--flying);
 }
 .flying-card-bg:hover {
-  background-image: url("../img/bg/flying.svg");
+  background-image: url("/assets/img/bg/flying.svg");
   background-size: unset;
 }
 .flying-icon-bg {
@@ -207,7 +211,7 @@ button#search-id-btn {
   background-color: var(--fire);
 }
 .fire-card-bg:hover {
-  background-image: url("../img/bg/fire.svg");
+  background-image: url("/assets/img/bg/fire.svg");
   background-size: cover;
 }
 .fire-icon-bg {
@@ -219,7 +223,7 @@ button#search-id-btn {
   background-color: var(--rock);
 }
 .rock-card-bg:hover {
-  background-image: url("../img/bg/rock.svg");
+  background-image: url("/assets/img/bg/rock.svg");
   background-size: unset;
 }
 .rock-icon-bg {
@@ -231,7 +235,7 @@ button#search-id-btn {
   background-color: var(--dark);
 }
 .dark-card-bg:hover {
-  background-image: url("../img/bg/dark.svg");
+  background-image: url("/assets/img/bg/dark.svg");
   background-size: cover;
 }
 .dark-icon-bg {
@@ -243,7 +247,7 @@ button#search-id-btn {
   background-color: var(--water);
 }
 .water-card-bg:hover {
-  background-image: url("../img/bg/water.svg");
+  background-image: url("/assets/img/bg/water.svg");
   background-size: cover;
 }
 .water-icon-bg {
@@ -255,7 +259,7 @@ button#search-id-btn {
   background-color: var(--bug);
 }
 .bug-card-bg:hover {
-  background-image: url("../img/bg/bug.svg");
+  background-image: url("/assets/img/bg/bug.svg");
   background-size: cover;
 }
 .bug-icon-bg {
@@ -267,7 +271,7 @@ button#search-id-btn {
   background-color: var(--poison);
 }
 .poison-card-bg:hover {
-  background-image: url("../img/bg/poison.svg");
+  background-image: url("/assets/img/bg/poison.svg");
   background-size: cover;
 }
 .poison-icon-bg {
@@ -279,7 +283,7 @@ button#search-id-btn {
   background-color: var(--normal);
 }
 .normal-card-bg:hover {
-  background-image: url("../img/bg/normal.svg");
+  background-image: url("/assets/img/bg/normal.svg");
   background-size: unset;
 }
 .normal-icon-bg {
@@ -291,7 +295,7 @@ button#search-id-btn {
   background-color: var(--electric);
 }
 .electric-card-bg:hover {
-  background-image: url("../img/bg/electric.svg");
+  background-image: url("/assets/img/bg/electric.svg");
   background-size: unset;
 }
 .electric-icon-bg {
@@ -302,7 +306,7 @@ button#search-id-btn {
   background-color: var(--fairy);
 }
 .fairy-card-bg:hover {
-  background-image: url("../img/bg/fairy.svg");
+  background-image: url("/assets/img/bg/fairy.svg");
   background-size: unset;
 }
 .fairy-icon-bg {
@@ -313,7 +317,7 @@ button#search-id-btn {
   background-color: var(--ground);
 }
 .ground-card-bg:hover {
-  background-image: url("../img/bg/ground.svg");
+  background-image: url("/assets/img/bg/ground.svg");
   background-size: unset;
 }
 .ground-icon-bg {
@@ -325,7 +329,7 @@ button#search-id-btn {
   background-color: var(--fighting);
 }
 .fighting-card-bg:hover {
-  background-image: url("../img/bg/fighting.svg");
+  background-image: url("/assets/img/bg/fighting.svg");
   background-size: cover;
 }
 .fighting-icon-bg {
@@ -337,7 +341,7 @@ button#search-id-btn {
   background-color: var(--psychic);
 }
 .psychic-card-bg:hover {
-  background-image: url("../img/bg/psychic.svg");
+  background-image: url("/assets/img/bg/psychic.svg");
   background-size: cover;
 }
 .psychic-icon-bg {
@@ -349,7 +353,7 @@ button#search-id-btn {
   background-color: var(--ghost);
 }
 .ghost-card-bg:hover {
-  background-image: url("../img/bg/ghost.svg");
+  background-image: url("/assets/img/bg/ghost.svg");
   background-size: cover;
 }
 .ghost-icon-bg {
@@ -360,7 +364,7 @@ button#search-id-btn {
   background-color: var(--stell);
 }
 .steel-card-bg:hover {
-  background-image: url("../img/bg/steel.svg");
+  background-image: url("/assets/img/bg/steel.svg");
   background-size: cover;
 }
 .steel-icon-bg {
@@ -372,7 +376,7 @@ button#search-id-btn {
   background-color: var(--ice);
 }
 .ice-card-bg:hover {
-  background-image: url("../img/bg/ice.svg");
+  background-image: url("/assets/img/bg/ice.svg");
   background-size: cover;
 }
 .ice-icon-bg {
@@ -385,7 +389,7 @@ button#search-id-btn {
   background-color: var(--dragon);
 }
 .dragon-card-bg:hover {
-  background-image: url("../img/bg/dragon.svg");
+  background-image: url("/assets/img/bg/dragon.svg");
   background-size: unset;
 }
 .dragon-icon-bg {
