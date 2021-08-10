@@ -9,8 +9,7 @@ const idFormat = (id) => {
     return idString;
   }
 };
-
-const iconFormat = (typesArray) => {
+const elementIconFormat = (typesArray) => {
   return typesArray.map((type) => {
     const pattern = `<a href="#">
           <img class="card-type-icon ${type}-icon ${type}-icon-bg" title="${type}" alt="${type} icon" src="/assets/img/types/v1/${type}.svg">
@@ -18,15 +17,13 @@ const iconFormat = (typesArray) => {
     return pattern;
   });
 };
-
 const cardFormat = (pokemonObj) => {
   const id = pokemonObj.id;
-  const idCard = this.id(id);
+  const idCard = idFormat(id);
   const name = pokemonObj.name;
   const types = typesPokemon(pokemonObj);
-  const icon = this.icon(types).join(" ");
-  const typeClass = types[0];
-  const pattern = `<div id="${id}" class="card ${typeClass}-card-bg">
+  const icon = elementIconFormat(types).join(" ");
+  const pattern = `<div id="${id}" class="card ${types[0]}-card-bg">
     <!--START CARDBOX  -->
 
       <div class="card-id-box">
@@ -71,8 +68,8 @@ const generatePokemonPromisses = () =>
     );
 
 const generateHTML = (pokemons) => {
-  pokemons.reduce((acc, pokemon) => {
-    acc += pattern.card(pokemon);
+  return pokemons.reduce((acc, pokemon) => {
+    acc += cardFormat(pokemon);
     return acc;
   }, "");
 };
@@ -80,5 +77,6 @@ const insertPokemons = (pokemons) => {
   const pokedex = document.querySelector('[data-js="pokedex');
   pokedex.innerHTML = pokemons;
 };
+
 const pokemonPromises = generatePokemonPromisses();
 Promise.all(pokemonPromises).then(generateHTML).then(insertPokemons);
