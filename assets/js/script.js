@@ -24,7 +24,6 @@ const pattern = {
     const types = typesPokemon(pokemonObj);
     const icon = this.icon(types).join(" ");
     const typeClass = types[0];
-    const pokemonImageFolder = "/assets/img/pokemons/";
     const pattern = `<div id="${id}" class="card ${typeClass}-card-bg">
     <!--START CARDBOX  -->
 
@@ -34,7 +33,7 @@ const pattern = {
       <!--START IMAGE  -->
       <div class="card-image-box">
         <div class="card-image"
-          style="background-image: url('${pokemonImageFolder}/${id}.png');">
+          style="background-image: url('${imgCheck(id)}');">
         </div>
     
       </div>
@@ -50,6 +49,11 @@ const pattern = {
   </div>`;
     return pattern;
   },
+};
+const imgCheck = (id) => {
+  const mainURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+  const alternativeURL = `/assets/img/pokemons/${id}.png`;
+  return id <= 649 ? mainURL : alternativeURL;
 };
 
 const typesPokemon = (pokemonObj) => {
