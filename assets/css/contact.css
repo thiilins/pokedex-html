@@ -1,0 +1,59 @@
+:root {
+  --linkedin-color: #0a66c2;
+  --github-color: #181717;
+}
+
+.td-item {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  position: fixed;
+  right: 0;
+
+  z-index: 100;
+  max-height: 9vh;
+  transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+.td-item a {
+  color: white;
+  width: 100%;
+  padding: 2.1rem 3rem 2.1rem 2rem;
+}
+.td-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 7rem;
+  min-height: 7rem;
+}
+.td-icon-img {
+  width: 4rem;
+}
+.td-link {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+/* GITHUB */
+.td-github {
+  background-color: var(--github-color);
+  bottom: 20rem;
+}
+.github-link {
+  background-color: black;
+}
+.td-github:hover > .github-link {
+  display: flex;
+}
+/* LINKEDIN */
+.td-linkedin {
+  background-color: var(--linkedin-color);
+  bottom: 27rem;
+}
+.linkedin-link {
+  background-color: #03213f;
+}
+.td-linkedin:hover > .linkedin-link {
+  display: flex;
+}
