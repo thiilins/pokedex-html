@@ -1,20 +1,32 @@
 :root {
   --linkedin-color: #0a66c2;
   --github-color: #181717;
+  --powered-color: #220052;
+  --powered-hover: #120129;
+  --code-color: #f95555;
 }
-
-.td-item {
+#td-widget {
+  color: white;
   display: flex;
+
+  flex-direction: column;
   font-size: 2rem;
-  align-items: center;
+  align-items: flex-end;
   position: fixed;
   right: 0;
-
   z-index: 100;
+  bottom: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+.td-item {
+  font-size: 2rem;
+  align-items: center;
+  display: flex;
   max-height: 9vh;
   transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
-.td-item a {
+.td-item a,
+.td-item p {
   color: white;
   width: 100%;
   padding: 2.1rem 3rem 2.1rem 2rem;
@@ -35,10 +47,39 @@
   align-items: center;
   justify-content: center;
 }
+/* POWERED */
+
+.td-powered {
+  display: flex;
+  align-items: center;
+  background-color: var(--powered-hover);
+  font-size: 2rem;
+  color: white;
+  min-height: 6rem;
+  padding: 0 3rem;
+}
+.td-powered a {
+  color: white;
+}
+.td-powered-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* CODE */
+.td-code {
+  background-color: var(--code-color);
+}
+.code-link {
+  background-color: #a82b2b;
+}
+.td-code:hover > .code-link {
+  display: flex;
+}
+
 /* GITHUB */
 .td-github {
   background-color: var(--github-color);
-  bottom: 20rem;
 }
 .github-link {
   background-color: black;
@@ -49,7 +90,6 @@
 /* LINKEDIN */
 .td-linkedin {
   background-color: var(--linkedin-color);
-  bottom: 27rem;
 }
 .linkedin-link {
   background-color: #03213f;
