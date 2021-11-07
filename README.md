@@ -35,7 +35,7 @@
 
 ## :dart: Sobre
 
-Pokedex desenvolvida com HTML, CSS e Javascript, Consumindo a PokéAPI com o intuito de praticar o consumo de API via front com o JavaScript.
+Pokedex desenvolvida com HTML, CSS e Javascript, Consumindo a PokéAPI com o intuito de praticar o consumo de API via front com o JavaScript e estilização CSS.
 <br>
 <br>
 
