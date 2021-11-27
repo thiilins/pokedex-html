@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-   <a href="https://td-pokedex.surge.sh" target="_blank"><img src="./.github/preview.gif" alt="Pokedex" /></a>
+   <a href="https://tgbr.site/pokedex_html" target="_blank"><img src="./.github/preview.gif" alt="Pokedex" /></a>
 
 &#xa0;
 
