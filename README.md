@@ -3,7 +3,7 @@
 
 &#xa0;
 
-<a href="https://td-pokedex.surge.sh">Demo</a>
+<a href="http://tgpro.site/pokedex_html">Demo</a>
 
 </div>
 
